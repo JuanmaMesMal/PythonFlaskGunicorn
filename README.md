@@ -40,3 +40,10 @@ luego con nuestra ip buscamos 'ip':5000
 - y a continuacion lo hacemos con  gunicorn
 ![Iniciar app](assets/img/iniciamosgunicorn.png)
 ![App desplegada gunicor](assets/img/desplegadogunicorn.png)
+- Apuntamos cual es el path de gunicorn 
+![Ruta path gunicorn](assets/img/pathgunicorn.png)
+
+- Lo siguiente es salirnos, y creamos un archivo falsk_app.service 
+la ruta es /etc/systemd/system/flask_app.service
+![flask_app.sevice](assets/img/flack_app.png)
+- Acontinuacion informamos a systemd que hay un nuevo servicio, luego lo habilitamos y iniciamos
