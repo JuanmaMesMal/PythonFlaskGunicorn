@@ -47,3 +47,30 @@ luego con nuestra ip buscamos 'ip':5000
 la ruta es /etc/systemd/system/flask_app.service
 ![flask_app.sevice](assets/img/flack_app.png)
 - Acontinuacion informamos a systemd que hay un nuevo servicio, luego lo habilitamos y iniciamos
+![habilitamos y inicimaos](assets/img/habilitar.png)
+
+-Lo siguiente es crear un arvhibo en etc/nginx/sites-available/app.conf y ponemos lo siguiente
+![Crear archivo sites-available](assets/img/sites-available.png)
+continuamos con un link simbolico del archivo usando el comando "sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/"
+y comprobamos que se ha realizado el link
+![Comprobar lik](assets/img/comprobarlink.png)
+- Lo siguiente que tenemos que haacer es comprobar que Ngix esta sin errores y reiniciamos el ngix y comprobamos el estado.
+![Comprobar errores y reiniciamos ](assets/img/sinerroresestado.png)
+- y para iniciarlo tenemos que modificar el archivo de /etc/hosts y dentro añadimos la ip de la maquina virtual y app.izv www.app.izv 
+![Desplegamos izv](assets/img/appizv.png)
+
+
+## Ampliacion
+- Accedemos a /var/www y copiabos el git.
+![Ampliacion clonar git](assets/img/ampliacionclone.png)
+- Nos metemos dentro de la carpeta y le damos permisos 
+![Permisos](assets/img/permisos.png)
+- Lo siguiente seria instalarnos pipenv requirements.txt
+![Instalar requirements](assets/img/instalarrequirements.png)
+- Creamos un nuevo servicio.
+![Nuevo Servicio](assets/img/nuevoservicio.png)
+- configuramos el ngix para que leaa el puerto
+![Leer pueto](assets/img/leerpuerto.png)
+- Activamos y ejecutamos la aplicacion despues de hacer los pasos de toda la practica
+![Activar y ejecutar sevicio](assets/img/ejecutamosyiniciamos.png)
+![Funnciona](assets/img/funcionando.png)
